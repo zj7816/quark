@@ -5,6 +5,8 @@
 <struts>
 
     <package name="basic" namespace="/quarkren" extends="page-default">
-
+        <action name="test" class="ren.quark.model.TestAction">
+            <result name="success" type="redirect">http://www.baidu.com</result>
+        </action>
     </package>
 </struts>

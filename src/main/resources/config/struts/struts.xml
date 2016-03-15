@@ -8,7 +8,7 @@
     <!--
         use in develop environment
     -->
-    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.devMode" value="true"/>
     <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
     <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
     <constant name="struts.objectFactory"
@@ -31,10 +31,10 @@
     <constant name="struts.ui.theme" value="simple"/>
     <!-- end by danson.liu -->
 
-    <constant name="struts.handle.exception" value="false" />
+    <!--<constant name="struts.handle.exception" value="false" />-->
 
     <include file="config/struts/struts-*.xml"/>
-    <package name="ajax-default" extends="avatar-json-default">
+    <package name="ajax-default" extends="struts-default">
         <interceptors>
             <interceptor-stack name="default-interceptor">
             </interceptor-stack>
@@ -44,13 +44,9 @@
             <result name="error" type="freemarker">/WEB-INF/pages/error.ftl</result>
             <result name="login" type="redirect">/login</result>
         </global-results>
-        <global-exception-mappings>
-            <exception-mapping result="error"
-                               exception="com.dianping.merchant.common.web.exception.ShopAccountWebProjectException"/>
-        </global-exception-mappings>
     </package>
 
-    <package name="page-default" extends="avatar-default">
+    <package name="page-default" extends="struts-default">
         <default-interceptor-ref name="default-interceptor"/>
         <global-results>
             <result name="error" type="freemarker">/WEB-INF/pages/error.ftl</result>

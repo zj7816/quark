@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="ace-java-demo" />
+        <module name="quark" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="ace-java-demo" target="1.6" />
+      <module name="quark" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
