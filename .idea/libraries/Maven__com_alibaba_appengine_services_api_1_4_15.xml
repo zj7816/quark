@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.alibaba.appengine:services-api:1.4.15">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/appengine/services-api/1.4.15/services-api-1.4.15.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/appengine/services-api/1.4.15/services-api-1.4.15-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/appengine/services-api/1.4.15/services-api-1.4.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
