@@ -4,7 +4,7 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 
-    <package name="basic" namespace="/quarkren" extends="page-default">
+    <package name="basic" namespace="/quarkren" extends="struts-default">
         <action name="test" class="ren.quark.model.TestAction">
             <result name="success" type="redirect">http://www.baidu.com</result>
         </action>

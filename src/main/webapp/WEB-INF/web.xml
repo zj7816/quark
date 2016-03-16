@@ -1,158 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
 
-	<display-name>quark</display-name>
+    <display-name>quark</display-name>
 
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>
-			classpath*:config/spring/local/appcontext-*.xml,
-		</param-value>
-	</context-param>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath*:config/spring/appcontext-*.xml
+        </param-value>
+    </context-param>
 
-	<filter>
-		<filter-name>encodingFilter</filter-name>
-		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
-		<init-param>
-			<param-name>encoding</param-name>
-			<param-value>utf-8</param-value>
-		</init-param>
-		<init-param>
-			<param-name>forceEncoding</param-name>
-			<param-value>true</param-value>
-		</init-param>
-	</filter>
-
-	<filter>
-		<filter-name>struts-prepare</filter-name>
-		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareFilter</filter-class>
-		<init-param>
-			<param-name>config</param-name>
-			<param-value>struts-default.xml,struts-plugin.xml,config/struts/struts.xml
-			</param-value>
-		</init-param>
-	</filter>
-
-	<filter>
-		<filter-name>struts-execute</filter-name>
-		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsExecuteFilter</filter-class>
-	</filter>
-
-	<filter-mapping>
-		<filter-name>encodingFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-		<dispatcher>REQUEST</dispatcher>
-		<dispatcher>FORWARD</dispatcher>
-	</filter-mapping>
-
-	<filter-mapping>
-		<filter-name>struts-prepare</filter-name>
-		<url-pattern>/*</url-pattern>
-		<dispatcher>REQUEST</dispatcher>
-		<dispatcher>FORWARD</dispatcher>
-	</filter-mapping>
-
-	<filter-mapping>
-		<filter-name>struts-execute</filter-name>
-		<url-pattern>/*</url-pattern>
-		<dispatcher>REQUEST</dispatcher>
-		<dispatcher>FORWARD</dispatcher>
-	</filter-mapping>
-
-	<servlet>
-		<servlet-name>JspSupportServlet</servlet-name>
-		<servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
 
 
-	<servlet>
-		<servlet-name>sitemesh-freemarker</servlet-name>
-		<servlet-class>com.opensymphony.module.sitemesh.freemarker.FreemarkerDecoratorServlet</servlet-class>
-		<init-param>
-			<param-name>TemplatePath</param-name>
-			<param-value>/</param-value>
-		</init-param>
-		<init-param>
-			<param-name>default_encoding</param-name>
-			<param-value>utf-8</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+        <init-param>
+        <param-name>config</param-name>
+        <param-value>struts-default.xml,struts-plugin.xml,config/struts/struts.xml
+        </param-value>
+        </init-param>
+    </filter>
 
-	<servlet-mapping>
-		<servlet-name>sitemesh-freemarker</servlet-name>
-		<url-pattern>*.ftl</url-pattern>
-	</servlet-mapping>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
 
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
 
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
+    <!--<filter-mapping>-->
+        <!--<filter-name>struts-prepare</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+        <!--<dispatcher>REQUEST</dispatcher>-->
+        <!--<dispatcher>FORWARD</dispatcher>-->
+    <!--</filter-mapping>-->
 
-	<listener>
-		<listener-class>org.apache.struts2.dispatcher.ng.listener.StrutsListener</listener-class>
-	</listener>
+    <!--<filter-mapping>-->
+        <!--<filter-name>struts-execute</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+        <!--<dispatcher>REQUEST</dispatcher>-->
+        <!--<dispatcher>FORWARD</dispatcher>-->
+    <!--</filter-mapping>-->
+
+    <!--<servlet>-->
+        <!--<servlet-name>JspSupportServlet</servlet-name>-->
+        <!--<servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>-->
+        <!--<load-on-startup>1</load-on-startup>-->
+    <!--</servlet>-->
 
 
-	<!--<servlet>-->
-		<!--<servlet-name>helloJSP</servlet-name>-->
-		<!--<jsp-file>/HelloAce.jsp</jsp-file>-->
-		<!--<init-param>-->
-			<!--<param-name>appName</param-name>-->
-			<!--<param-value>ace.demo</param-value>-->
-		<!--</init-param>-->
-	<!--</servlet>-->
+    <!--<servlet>-->
+        <!--<servlet-name>sitemesh-freemarker</servlet-name>-->
+        <!--<servlet-class>com.opensymphony.module.sitemesh.freemarker.FreemarkerDecoratorServlet</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>TemplatePath</param-name>-->
+            <!--<param-value>/</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>default_encoding</param-name>-->
+            <!--<param-value>utf-8</param-value>-->
+        <!--</init-param>-->
+        <!--<load-on-startup>1</load-on-startup>-->
+    <!--</servlet>-->
 
-	<!--<servlet>-->
-		<!--<servlet-name>HelloAce</servlet-name>-->
-		<!--<servlet-class>ren.quark.HelloAce</servlet-class>-->
-	<!--</servlet>-->
-	<!--<servlet>-->
-		<!--<servlet-name>CacheServiceDemo</servlet-name>-->
-		<!--<servlet-class>ren.quark.service.CacheServiceDemo</servlet-class>-->
-	<!--</servlet>-->
-	<!--<servlet>-->
-		<!--<servlet-name>StoreServiceDemo</servlet-name>-->
-		<!--<servlet-class>ren.quark.service.StoreServiceDemo</servlet-class>-->
-	<!--</servlet>-->
-	<!--<servlet>-->
-		<!--<servlet-name>MailServiceDemo</servlet-name>-->
-		<!--<servlet-class>ren.quark.service.MailServiceDemo</servlet-class>-->
-	<!--</servlet>-->
-	<!--<servlet>-->
-		<!--<servlet-name>LogServiceDemo</servlet-name>-->
-		<!--<servlet-class>ren.quark.service.LogServiceDemo</servlet-class>-->
-	<!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>sitemesh-freemarker</servlet-name>-->
+        <!--<url-pattern>*.ftl</url-pattern>-->
+    <!--</servlet-mapping>-->
 
-	<!--<servlet-mapping>-->
-		<!--<servlet-name>helloJSP</servlet-name>-->
-		<!--<url-pattern>/HelloAce.jsp</url-pattern>-->
-	<!--</servlet-mapping>-->
-	<!--<servlet-mapping>-->
-		<!--<servlet-name>HelloAce</servlet-name>-->
-		<!--<url-pattern>/HelloAce.do</url-pattern>-->
-	<!--</servlet-mapping>-->
-	<!--<servlet-mapping>-->
-		<!--<servlet-name>CacheServiceDemo</servlet-name>-->
-		<!--<url-pattern>/CacheServiceDemo.do</url-pattern>-->
-	<!--</servlet-mapping>-->
-	<!--<servlet-mapping>-->
-		<!--<servlet-name>StoreServiceDemo</servlet-name>-->
-		<!--<url-pattern>/StoreServiceDemo.do</url-pattern>-->
-	<!--</servlet-mapping>-->
-	<!--<servlet-mapping>-->
-		<!--<servlet-name>MailServiceDemo</servlet-name>-->
-		<!--<url-pattern>/MailServiceDemo.do</url-pattern>-->
-	<!--</servlet-mapping>-->
-	<!--<servlet-mapping>-->
-		<!--<servlet-name>LogServiceDemo</servlet-name>-->
-		<!--<url-pattern>/LogServiceDemo.do</url-pattern>-->
-	<!--</servlet-mapping>-->
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>org.apache.struts2.dispatcher.ng.listener.StrutsListener</listener-class>
+    </listener>
+
+
+    <!--<servlet>-->
+    <!--<servlet-name>helloJSP</servlet-name>-->
+    <!--<jsp-file>/HelloAce.jsp</jsp-file>-->
+    <!--<init-param>-->
+    <!--<param-name>appName</param-name>-->
+    <!--<param-value>ace.demo</param-value>-->
+    <!--</init-param>-->
+    <!--</servlet>-->
+
+    <!--<servlet>-->
+    <!--<servlet-name>HelloAce</servlet-name>-->
+    <!--<servlet-class>ren.quark.HelloAce</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet>-->
+    <!--<servlet-name>CacheServiceDemo</servlet-name>-->
+    <!--<servlet-class>ren.quark.service.CacheServiceDemo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet>-->
+    <!--<servlet-name>StoreServiceDemo</servlet-name>-->
+    <!--<servlet-class>ren.quark.service.StoreServiceDemo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet>-->
+    <!--<servlet-name>MailServiceDemo</servlet-name>-->
+    <!--<servlet-class>ren.quark.service.MailServiceDemo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet>-->
+    <!--<servlet-name>LogServiceDemo</servlet-name>-->
+    <!--<servlet-class>ren.quark.service.LogServiceDemo</servlet-class>-->
+    <!--</servlet>-->
+
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>helloJSP</servlet-name>-->
+    <!--<url-pattern>/HelloAce.jsp</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>HelloAce</servlet-name>-->
+    <!--<url-pattern>/HelloAce.do</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>CacheServiceDemo</servlet-name>-->
+    <!--<url-pattern>/CacheServiceDemo.do</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>StoreServiceDemo</servlet-name>-->
+    <!--<url-pattern>/StoreServiceDemo.do</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>MailServiceDemo</servlet-name>-->
+    <!--<url-pattern>/MailServiceDemo.do</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>LogServiceDemo</servlet-name>-->
+    <!--<url-pattern>/LogServiceDemo.do</url-pattern>-->
+    <!--</servlet-mapping>-->
 </web-app>
