@@ -1,0 +1,1 @@
+/** *dianping.com Inc *Copyright(c)2004-2016 All Rights Reserved. */package ren.quark.facade.action;/** * @author zhangjie * @version $Id: HelloWorldAction.java, v 0.1 2016-03-16 下午1:43 zhangjie Exp $$ */public class HelloWorldAction extends BaseAction {    @Override    public String execute() throws Exception {        return SUCCESS;    }}
