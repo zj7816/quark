@@ -1,0 +1,1 @@
+/** *dianping.com Inc *Copyright(c)2004-2016 All Rights Reserved. */package ren.quark.domain.model.shared;/** * @author zhangjie * @version $Id: ValueObject.java, v 0.1 2016-03-11 下午2:02 zhangjie Exp $$ */public interface ValueObject<T> {    /**     * valueobjects compares by attrbutes     * @param other     * @return     */     boolean sameAs(T other);}

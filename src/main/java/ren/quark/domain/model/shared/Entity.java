@@ -1,0 +1,1 @@
+/** *Copyright(c)2004-2016 All Rights Reserved. */package ren.quark.domain.model.shared;/** * Entity * * @author zhangjie * @version $Id: Entity.java, v 0.1 2016-03-11 下午2:00 zhangjie Exp $$ */public interface Entity<T> {    /**     * entites compare by identity,not attributes     *     * @param other     * @return     */     boolean sameIdentityAs(T other);}

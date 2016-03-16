@@ -1,0 +1,1 @@
+/** *dianping.com Inc *Copyright(c)2004-2016 All Rights Reserved. */package ren.quark.domain.model.shared;/** * @author zhangjie * @version $Id: IdentityId.java, v 0.1 2016-03-11 下午2:06 zhangjie Exp $$ */public class IdentityId implements ValueObject<IdentityId> {    @Override    public boolean sameAs(IdentityId other) {        return false;    }}

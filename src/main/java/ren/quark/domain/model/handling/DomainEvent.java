@@ -1,0 +1,1 @@
+/** *dianping.com Inc *Copyright(c)2004-2016 All Rights Reserved. */package ren.quark.domain.model.handling;/** * @author zhangjie * @version $Id: DomainEvent.java, v 0.1 2016-03-14 上午11:40 zhangjie Exp $$ */public interface DomainEvent<T> {    /**     * 判断两个事件是否相同，用于消息的幂等性处理     *     * @param t     * @return     */    boolean sameEventAs(T t);}
