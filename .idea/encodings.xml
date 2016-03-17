@@ -13,7 +13,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/ren/quark/domain/model/shared/ValueObject.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/config/dict" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/config/spring/appcontext-service.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/config/spring/local" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/config/struts" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/config/struts/struts-quark.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/config/struts/struts.xml" charset="UTF-8" />
