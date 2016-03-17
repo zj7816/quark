@@ -1,1 +1,0 @@
-/** *dianping.com Inc *Copyright(c)2004-2016 All Rights Reserved. */package ren.quark.domain.model.indexs;import ren.quark.domain.model.shared.Context;/** * @author zhangjie * @version $Id: LandingStrategy.java, v 0.1 2016-03-17 下午2:08 zhangjie Exp $$ */public interface LandingStrategy {    public Indexs landing(Context context);}
