@@ -4,19 +4,12 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
 
-    <package name="basic" namespace="/quarkren" extends="struts-default">
-        <action name="greet" class="ren.quark.facade.action.HelloWorldAction">
-            <result  name="success" type="json">
-                <param name="callbackParameter">callback</param>
-            </result>
-        </action>
-    </package>
+    <!--<package name="basic" namespace="/quarkren" extends="struts-default">-->
+        <!--<action name="greet" class="ren.quark.facade.action.HelloWorldAction">-->
+            <!--<result name="success" type="json">-->
+                <!--<param name="callbackParameter">callback</param>-->
+            <!--</result>-->
+        <!--</action>-->
+    <!--</package>-->
 
-    <package name="basic" namespace="/quarkren/ajax" extends="json-default">
-        <action name="greet" class="ren.quark.facade.action.HelloWorldAction">
-            <result  name="success" type="json">
-                <param name="callbackParameter">callback</param>
-            </result>
-        </action>
-    </package>
 </struts>
