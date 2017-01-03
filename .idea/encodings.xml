@@ -9,7 +9,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/ren/quark/domain/model/indexs/IndexType.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ren/quark/domain/model/indexs/Indexs.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ren/quark/domain/model/shared/Entity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ren/quark/domain/model/shared/IdentityId.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ren/quark/domain/model/shared/ValueObject.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/config/dict" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/config/spring/appcontext-service.xml" charset="UTF-8" />

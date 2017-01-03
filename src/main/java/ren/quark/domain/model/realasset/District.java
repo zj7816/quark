@@ -1,0 +1,1 @@
+/** *dianping.com Inc *Copyright(c)2004-2017 All Rights Reserved. */package ren.quark.domain.model.realasset;/** * @author zhangjie * @version $Id: District.java, v 0.1 2017-01-03 下午3:59 zhangjie Exp $$ */public interface District {}
