@@ -8,6 +8,18 @@
     </JAVADOC>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/us/codecraft/webmagic-core/0.6.0/webmagic-core-0.6.0-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-core/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-core/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-extension/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-extension/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-samples/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-samples/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-saxon/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-saxon/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-scripts/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-scripts/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-selenium/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-selenium/src/test/java" />
     </SOURCES>
   </library>
 </component>
