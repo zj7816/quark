@@ -16,5 +16,6 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/config/struts/struts-quark.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources/config/struts/struts.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../learn/webmagic-master/webmagic-core/src/main/java/us/codecraft/webmagic/downloader/HttpClientDownloader.java" charset="UTF-8" />
   </component>
 </project>
