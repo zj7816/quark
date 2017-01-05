@@ -1,1 +1,0 @@
-/** *dianping.com Inc *Copyright(c)2004-2016 All Rights Reserved. */package ren.quark.application;/** * @author zhangjie * @version $Id: IndexsServcie.java, v 0.1 2016-03-17 下午12:07 zhangjie Exp $$ */public interface IndexsServcie {}
