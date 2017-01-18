@@ -1,0 +1,1 @@
+/** * 此包中的Processor是对几个楼市门户网站进行爬取，爬取数据为城市均价信息，行政区均价信息，特定小区均价信息 * Created by zhangjie on 17/1/18. */package ren.quark.application.processor.realasset;
